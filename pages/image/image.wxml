@@ -1,0 +1,4 @@
+<!--pages/image.wxml-->
+<view class="container">
+<image data-url="{{url}}" src="{{url}}" mode="aspectFit" bindlongpress="on_image_long_press"></image>
+</view>

@@ -1,0 +1,47 @@
+<!--pages/me/me.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title" style="padding-bottom: 30rpx;">
+      <view wx:if="{{alreadyObtainedUserInfo}}" class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 40rpx;">
+          <image src="{{userInfo.avatarUrl}}" style="width: 160rpx; height: 160rpx; display: block" />
+          <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">New</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view style="font-size: 48rpx;">{{userInfo.nickName}}</view>
+          <view style="font-size: 32rpx;color: #888888;">{{userInfo.province}}-{{userInfo.city}}</view>
+        </view>
+      </view>
+      <view wx:else class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 40rpx;">
+          <image style="width: 160rpx; height: 160rpx; display: block" />
+        </view>
+        <view class="weui-cell__bd">
+          <view style="font-size: 48rpx;">请点击获取用户信息</view>
+          <view style="font-size: 32rpx;color: #888888;">请点击获取用户信息</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells .weui-cells_after-title">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{infoList}}" wx:key="id">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 10rpx;vertical-align: middle;width:50rpx; height: 50rpx;"></image>
+        </view>
+        <view class="weui-cell__bd" style='font-size: 48rpx'>{{item.text}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size: 40rpx'>{{item.text}}</view>
+      </view>
+    </view>
+
+    <view class="weui-cells .weui-cells_after-title">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{settingList}}" wx:key="id">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 10rpx;vertical-align: middle;width:50rpx; height: 50rpx;"></image>
+        </view>
+        <view class="weui-cell__bd" style='font-size: 48rpx'>{{item.text}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size: 40rpx'>{{item.text}}</view>
+      </view>
+    </view>
+    <button class="weui-btn" size="default" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" style="margin-left: 20rpx;margin-right: 30rpx;" disabled="{{alreadyObtainedUserInfo}}">获取用户信息</button>
+  </view>
+</view>

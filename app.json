@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/me/me",
+    "pages/meizi/meizi",
+    "pages/logs/logs",
+    "pages/listPage/listPage",
+    "pages/xiandu/xiandu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "MeiZi",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/meizi/meizi",
+        "text": "meizi",
+        "iconPath": "res/icons/new.png",
+        "selectedIconPath": "res/icons/new_active.png"
+      },
+      {
+        "pagePath": "pages/xiandu/xiandu",
+        "text": "xiandu",
+        "iconPath": "res/icons/xiandu.png",
+        "selectedIconPath": "res/icons/xiandu_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "me",
+        "iconPath": "res/icons/me.png",
+        "selectedIconPath": "res/icons/me_active.png"
+      }
+    ]
+  }
+}

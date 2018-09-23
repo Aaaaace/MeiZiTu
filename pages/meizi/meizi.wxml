@@ -1,0 +1,12 @@
+<!--index.wxml-->
+
+<!--content-->
+<scroll-view class="container">
+  <!--可以通过修改class改变布局-->
+  <view id="{{id}}" class="style2" data-url="{{item.url}}" wx:for="{{items}}" wx:key="id" wx:for-index="id" bindtap="on_item_tap" bindlongpress="on_item_long_press">
+    <image class="img" src="{{item.url}}" mode="aspectFill" />
+    <view>{{item.host}}: {{item.postTime}}</view>
+  </view>
+  <!--一键存图-->
+  <button class="hover-button" bindtap="on_button_tap" disabled=''></button>
+</scroll-view>
