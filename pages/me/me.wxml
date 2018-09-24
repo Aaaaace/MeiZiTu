@@ -1,6 +1,7 @@
 <!--pages/me/me.wxml-->
 <view class="page">
   <view class="page__bd">
+    <!--头像-->
     <view class="weui-cells weui-cells_after-title" style="padding-bottom: 30rpx;">
       <view wx:if="{{alreadyObtainedUserInfo}}" class="weui-cell">
         <view class="weui-cell__hd" style="position: relative;margin-right: 40rpx;">
@@ -22,26 +23,27 @@
         </view>
       </view>
     </view>
-
+    <!--信息列表-->
     <view class="weui-cells .weui-cells_after-title">
-      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{infoList}}" wx:key="id">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{infoList}}" wx:key="id" data-title="{{item.title}}" bindtap="onItemTap">
         <view class="weui-cell__hd">
           <image src="{{icon}}" style="margin-right: 10rpx;vertical-align: middle;width:50rpx; height: 50rpx;"></image>
         </view>
-        <view class="weui-cell__bd" style='font-size: 48rpx'>{{item.text}}</view>
-        <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size: 40rpx'>{{item.text}}</view>
+        <view class="weui-cell__bd" style='font-size: 48rpx'>{{item.title}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size: 40rpx'>{{item.title}}</view>
       </view>
     </view>
-
+    <!--设置列表-->
     <view class="weui-cells .weui-cells_after-title">
-      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{settingList}}" wx:key="id">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{settingList}}" wx:key="id" data-title="{{item.title}}" bindtap="onItemTap">
         <view class="weui-cell__hd">
           <image src="{{icon}}" style="margin-right: 10rpx;vertical-align: middle;width:50rpx; height: 50rpx;"></image>
         </view>
-        <view class="weui-cell__bd" style='font-size: 48rpx'>{{item.text}}</view>
-        <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size: 40rpx'>{{item.text}}</view>
+        <view class="weui-cell__bd" style='font-size: 48rpx'>{{item.title}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size: 40rpx'>{{item.title}}</view>
       </view>
     </view>
+
     <button class="weui-btn" size="default" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" style="margin-left: 20rpx;margin-right: 30rpx;" disabled="{{alreadyObtainedUserInfo}}">获取用户信息</button>
   </view>
 </view>

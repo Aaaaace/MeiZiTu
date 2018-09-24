@@ -1,2 +1,2 @@
 <!--pages/listPage/listPage.wxml-->
-<text>pages/listPage/listPage.wxml</text>
+<text>{{title}}</text>

@@ -11,29 +11,29 @@ Page({
      * 个人页面选项列表数据
      */
     infoList: [{
-      text: "collections",
+      title: "collections",
       icon: "",
       url: ""
     }, {
-      text: "position",
+      title: "position",
       icon: "",
       url: ""
     }, {
-      text: "posts",
+      title: "posts",
       icon: "",
       url: ""
     }, {
-      text: "favorite",
+      title: "favorite",
       icon: "",
       url: ""
     }],
     settingList: [{
-        text: "setting",
+        title: "setting",
         icon: "",
         url: ""
       },
       {
-        text: "feedback",
+        title: "feedback",
         icon: "",
         url: ""
       }
@@ -113,8 +113,16 @@ Page({
         alreadyObtainedUserInfo: true,
         userInfo: res.detail.userInfo
       })
-    }else{
+    } else {
       console.log("rejected")
     }
+  },
+  /** 以下是组件事件
+   */
+  onItemTap: function(options){
+    var title = options.currentTarget.dataset.title
+    wx.navigateTo({
+      url: '../listPage/listPage?title=' + title,
+    })
   }
 })

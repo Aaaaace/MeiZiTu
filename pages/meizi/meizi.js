@@ -16,7 +16,7 @@ Page({
       mask: true,
       duration: 500
     })
-    load_more(this)
+    load_more_meizi(this)
   },
   onReachBottom: function() {
     console.log("onReachBottom")
@@ -26,7 +26,7 @@ Page({
       mask: true,
       duration: 500
     })
-    load_more(this)
+    load_more_meizi(this)
   },
   /*
    * 下拉刷新
@@ -43,7 +43,7 @@ Page({
       mask: true,
       duration: 500
     })
-    load_more(this)
+    load_more_meizi(this)
   },
   onPageScoll: function() {
 
@@ -125,11 +125,11 @@ var savedImgNum = 0 // 已保存的图片数量
 var itemList = [] // 保存获取的图片url和其他信息
 
 /**
- * 请求图片
+ * 请求meizi图片
  * @param thePage: page对象
  */
-function load_more(thePage) {
-  console.log("load_more")
+function load_more_meizi(thePage) {
+  console.log("load_more_meizi")
 
   var targetPage = ++currentPage // 请求的页数
   var temp_items = itemList
