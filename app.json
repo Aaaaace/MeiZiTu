@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/xiandu/xiandu",
     "pages/me/me",
     "pages/meizi/meizi",
     "pages/logs/logs",
     "pages/listPage/listPage",
-    "pages/xiandu/xiandu"
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

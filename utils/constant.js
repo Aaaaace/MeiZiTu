@@ -11,7 +11,12 @@ var GET_XIANDU_URL = BASE_URL.concat("/xiandu/data/id/zhihu/count/10/page/")
  */
 function load_more(thePage, url) {
   console.log("load_more:", url)
-
+  wx.showToast({
+    title: '加载中...',
+    icon: 'loading',
+    mask: true,
+    duration: 20000
+  })
   wx.request({
     url: url,
     dataType: "json",
@@ -19,7 +24,7 @@ function load_more(thePage, url) {
       "Constant-Type": "application/json",
     },
     success: function(res) {
-      console.log(res)
+      // console.log(res)
       if (res == null ||
         res.data == null ||
         res.data.results == null ||
@@ -42,6 +47,7 @@ function load_more(thePage, url) {
       thePage.setData({
         listItems: temp_listItems
       })
+      wx.hideToast()
     }
   })
 }

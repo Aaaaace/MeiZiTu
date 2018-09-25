@@ -1,2 +1,5 @@
 <!--pages/xiandu/xiandu.wxml-->
-<text>pages/xiandu/xiandu.wxml</text>
+<import src="xiandu_list"/>
+<view class="container">
+  <template is="xiandu-list" data="{{listItems}}"/>
+</view>

@@ -1,0 +1,23 @@
+<!--闲读项目-->
+<template name="xiandu-item">
+  <navigator url="../detail/detail?pageData={{item.raw}}">
+    <view class="item_bd">
+      <image class="item_cover" wx:if="{{item.cover!='none'}}" src="{{item.cover}}" style='width:40%;height:100%;margin-right:15rpx;' mode="aspectFill" />
+      <view class="item_text">
+        <view class="item_title">{{item.title}}</view>
+        <view class="item_post-time">{{item.published_at}}</view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<!--闲读项目列表-->
+<template name="xiandu-list">
+  <view class="list">
+    <template is="xiandu-item" wx:for="{{listItems}}" wx:key="id" data="{{item}}" />
+    <view class="tips">
+      <image src="../../res/images/loading.gif" style='width:42rpx;height:42rpx;'></image>
+      <text style='font-size:36rpx;color:#888'>加载中...</text>
+    </view>
+  </view>
+</template>
