@@ -105,7 +105,7 @@ Page({
    * 获取用户信息
    */
   onGotUserInfo: function(res) {
-    console.log(res)
+    // console.log(res)
     if (res.detail.errMsg == "getUserInfo:ok") {
       getApp().globalData.userInfo = res.detail.userInfo
       console.log("ok")
