@@ -78,6 +78,7 @@ Page({
     for(var i=0,len=this.data.listItems.length;i<len;i++){
       if(this.data.listItems[i].id==id){
         wx.setStorageSync("xiandu_detail", this.data.listItems[i].raw)
+        wx.setStorageSync("xiandu_detail_url", this.data.listItems[i].url)
         break
       }
     }

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pageData: {}
+    pageData: {},
+    url: ""
   },
 
   /**
@@ -15,7 +16,7 @@ Page({
     console.log(wx.getStorageSync("xiandu_detail").replace(/'([^']*)'/g, '"$1"'))
     var thePage = this
     this.setData({
-      pageData: JSON.parse(wx.getStorageSync("xiandu_detail").replace(/'/g, '"'))
+      url: wx.getStorageSync("xiandu_detail_url")
     })
   },
 
