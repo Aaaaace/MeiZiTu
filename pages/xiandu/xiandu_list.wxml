@@ -21,3 +21,13 @@
     </view>
   </view>
 </template>
+
+<!--navbar-->
+<template name="nav-bar">
+  <view class="nav-bar">
+    <view class="nav-item" wx:for="{{navItems}}" id="nav-item-{{index}}">
+      <view class="nav-item_bd"></view>
+    </view>
+    <view class="slider"></view>
+  </view>
+</template>

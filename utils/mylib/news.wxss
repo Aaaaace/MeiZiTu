@@ -1,4 +1,6 @@
-/* pages/xiandu/xiandu.wxss */
+/* news.wxss */
+
+/* 保存news系列模板的样式 */
 
 .list {
   height: 100%;
