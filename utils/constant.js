@@ -10,7 +10,7 @@ var GET_XIANDU_URL = BASE_URL.concat("/xiandu/data/id/zhihu/count/10/page/")
  * 待修改
  */
 function load_more(thePage, url) {
-  console.log("load_more:", url)
+  // console.log("load_more:", url)
   wx.showToast({
     title: '加载中...',
     icon: 'loading',
@@ -32,10 +32,11 @@ function load_more(thePage, url) {
         console.log("cant get data")
         return
       }
-      // console.log(temp_items)
+      console.log(res)
       var temp_listItems = thePage.data.listItems
       for (var i = 0; i < res.data.results.length; i++) {
         temp_listItems.push({
+          id: res.data.results[i]._id,
           title: res.data.results[i].title,
           cover: res.data.results[i].cover,
           site: res.data.results[i].site,

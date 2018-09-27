@@ -1,6 +1,6 @@
 <!--闲读项目-->
 <template name="xiandu-item">
-  <navigator url="../detail/detail?pageData={{item.raw}}">
+  <view class="item" data-id="{{item.id}}" bindtap='on_item_tap'>
     <view class="item_bd">
       <image class="item_cover" wx:if="{{item.cover!='none'}}" src="{{item.cover}}" style='width:40%;height:100%;margin-right:15rpx;' mode="aspectFill" />
       <view class="item_text">
@@ -8,7 +8,7 @@
         <view class="item_post-time">{{item.published_at}}</view>
       </view>
     </view>
-  </navigator>
+  </view>
 </template>
 
 <!--闲读项目列表-->

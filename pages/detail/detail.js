@@ -5,15 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pageData: ""
+    pageData: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(wx.getStorageSync("xiandu_detail").replace(/'([^']*)'/g, '"$1"'))
+    var thePage = this
     this.setData({
-      pageData: eval('(' + options.pageData + ')')
+      pageData: JSON.parse(wx.getStorageSync("xiandu_detail").replace(/'/g, '"'))
     })
   },
 

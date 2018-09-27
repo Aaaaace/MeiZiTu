@@ -67,5 +67,22 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+
+  /**
+   * 以下是组件事件
+   */
+  on_item_tap: function(res){
+    console.log(res)
+    var id = res.currentTarget.dataset.id
+    for(var i=0,len=this.data.listItems.length;i<len;i++){
+      if(this.data.listItems[i].id==id){
+        wx.setStorageSync("xiandu_detail", this.data.listItems[i].raw)
+        break
+      }
+    }
+    wx.navigateTo({
+      url: '../detail/detail',
+    })
   }
 })

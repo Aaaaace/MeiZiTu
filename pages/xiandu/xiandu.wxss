@@ -1,15 +1,15 @@
 /* pages/xiandu/xiandu.wxss */
 
-navigator {
-  widows: 100%;
-}
-
 .list {
   height: 100%;
   width: 100%;
 }
 
-.list navigator .item_bd {
+.item {
+  width: 100%;
+}
+
+.list .item .item_bd {
   padding: 20rpx;
   height: 200rpx;
   background-color: #fff;
@@ -20,6 +20,8 @@ navigator {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
   flex: 0;
 }
 
@@ -38,6 +40,7 @@ navigator {
   margin-bottom: 10rpx;
   font-size: 36rpx;
 }
+
 .list .item_bd .item_text .item_post-time {
   width: 100%;
   overflow: hidden;
